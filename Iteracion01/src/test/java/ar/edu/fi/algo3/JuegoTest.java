@@ -2,7 +2,6 @@ package test.java.ar.edu.fi.algo3;
 
 import main.java.ar.edu.fi.algo3.CampoBatalla;
 import main.java.ar.edu.fi.algo3.Unidad;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
