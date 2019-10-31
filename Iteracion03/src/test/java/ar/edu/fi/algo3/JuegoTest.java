@@ -13,16 +13,25 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+/****
+ *
+ * War of word craft
+ *
+ *  - Singleton: Campo batalla
+ *  - Strategy: Diferentes ataques.
+ *  - AbstractFactory, Proxy: Usuario remoto.
+ *
+ */
 public class JuegoTest {
 
     @Test
     public void test() {
-        AbstractUnidadFactory factoryUnidades=getFactoryUnidades();
+        AbstractUnidadFactory factoryUnidades = getFactoryUnidades();
 
-        CampoBatalla.getInstance().AddUnidad(factoryUnidades.crearUnidad("U1",new DisparoBasicoStrategy()));
-        CampoBatalla.getInstance().AddUnidad(factoryUnidades.crearUnidad("U2",new DisparoBasicoStrategy()));
+        CampoBatalla.getInstance().AddUnidad(factoryUnidades.crearUnidad("U1", new DisparoBasicoStrategy()));
+        CampoBatalla.getInstance().AddUnidad(factoryUnidades.crearUnidad("U2", new DisparoBasicoStrategy()));
 
-        Unidad unaUnidad=factoryUnidades.crearUnidad("U3",new DisparoSuperStrategy());
+        Unidad unaUnidad = factoryUnidades.crearUnidad("U3", new DisparoSuperStrategy());
 
         CampoBatalla.getInstance().AddUnidad(unaUnidad);
 
@@ -33,7 +42,7 @@ public class JuegoTest {
         assertEquals(expected, unaUnidad.disparar());
     }
 
-    public static AbstractUnidadFactory getFactoryUnidades(){
+    public static AbstractUnidadFactory getFactoryUnidades() {
         return new UnidadRemotaFactory();
     }
 

@@ -13,26 +13,25 @@ import java.util.List;
  */
 public class DisparoSuperStrategy extends DisparoStrategy {
 
-	private Unidad unidad;
-	
-	public List<String> disparar() {
-		List<String> result = new ArrayList<>();
+    private Unidad unidad;
 
-		Collection unidades= CampoBatalla.getInstance().getUnidadesCercanas();
-		Iterator it = unidades.iterator();
-		while(it.hasNext())
-		{
-			Unidad other =(Unidad)it.next();
-			if ( other != unidad){
-				result.add("super dispara a: " + other.toString());
-			}
-		}
+    public List<String> disparar() {
+        List<String> result = new ArrayList<>();
 
-		return result;
-	}
+        Collection unidades = CampoBatalla.getInstance().getUnidadesCercanas();
+        Iterator it = unidades.iterator();
+        while (it.hasNext()) {
+            Unidad other = (Unidad) it.next();
+            if (other != unidad) {
+                result.add("super dispara a: " + other.toString());
+            }
+        }
 
-	public void setUnidad(Unidad unidad) {
-		this.unidad=unidad;		
-	}
+        return result;
+    }
+
+    public void setUnidad(Unidad unidad) {
+        this.unidad = unidad;
+    }
 
 }

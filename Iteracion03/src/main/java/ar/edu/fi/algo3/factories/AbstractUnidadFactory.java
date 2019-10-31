@@ -7,5 +7,5 @@ import main.java.ar.edu.fi.algo3.strategies.DisparoStrategy;
  * @author Marcio Degiovannini
  */
 public abstract class AbstractUnidadFactory {
-	public abstract Unidad crearUnidad(String nombre, DisparoStrategy estrategiaDisparo);
+    public abstract Unidad crearUnidad(String nombre, DisparoStrategy estrategiaDisparo);
 }

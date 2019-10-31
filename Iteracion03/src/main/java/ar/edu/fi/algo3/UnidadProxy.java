@@ -9,30 +9,30 @@ import java.util.List;
  * @author Marcio Degiovannini
  */
 public class UnidadProxy implements Unidad {
-	
-	private String nombre;
-	private DisparoStrategy estrategiaDisparo;
 
-	public UnidadProxy(String nombre, DisparoStrategy estrategiaDisparo) {
-		this.nombre=nombre;
-		this.estrategiaDisparo = estrategiaDisparo;
-		MaquinaRemota.getInstance().CrearUnidad(this);
-		
-	}
+    private String nombre;
+    private DisparoStrategy estrategiaDisparo;
 
-	public List<String> disparar() {
-		String remoteResult = MaquinaRemota.getInstance().DispararUnidad(this);
+    public UnidadProxy(String nombre, DisparoStrategy estrategiaDisparo) {
+        this.nombre = nombre;
+        this.estrategiaDisparo = estrategiaDisparo;
+        MaquinaRemota.getInstance().CrearUnidad(this);
 
-		List<String> result = new UnidadImpl(nombre, estrategiaDisparo).disparar();
+    }
 
-		result.add(remoteResult);
+    public List<String> disparar() {
+        String remoteResult = MaquinaRemota.getInstance().DispararUnidad(this);
 
-		return result;
-		
-	}
-	
-	public String toString(){
-		return "Unidad remota "+nombre;
-	}
+        List<String> result = new UnidadImpl(nombre, estrategiaDisparo).disparar();
+
+        result.add(remoteResult);
+
+        return result;
+
+    }
+
+    public String toString() {
+        return "Unidad remota " + nombre;
+    }
 
 }

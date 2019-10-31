@@ -6,5 +6,5 @@ import java.util.List;
  * @author Marcio Degiovannini
  */
 public interface Unidad {
-	public List<String> disparar();
+    List<String> disparar();
 }

@@ -9,8 +9,8 @@ import main.java.ar.edu.fi.algo3.strategies.DisparoStrategy;
  */
 public class UnidadRemotaFactory extends AbstractUnidadFactory {
 
-	public Unidad crearUnidad(String nombre, DisparoStrategy estrategiaDisparo) {
-		return new UnidadProxy(nombre,estrategiaDisparo);
-	}
+    public Unidad crearUnidad(String nombre, DisparoStrategy estrategiaDisparo) {
+        return new UnidadProxy(nombre, estrategiaDisparo);
+    }
 
 }

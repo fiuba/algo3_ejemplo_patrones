@@ -8,6 +8,7 @@ import java.util.List;
  * @author Marcio Degiovannini
  */
 public abstract class DisparoStrategy {
-	public abstract List<String> disparar();
-	public abstract void setUnidad(Unidad unidad);
+    public abstract List<String> disparar();
+
+    public abstract void setUnidad(Unidad unidad);
 }

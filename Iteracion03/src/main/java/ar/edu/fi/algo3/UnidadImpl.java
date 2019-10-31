@@ -10,22 +10,21 @@ import java.util.List;
  */
 public class UnidadImpl implements Unidad {
 
-	private String nombre;
-	private DisparoStrategy disparoStrategy;
-	
-	public UnidadImpl(String nombre, DisparoStrategy disparoStrategy){
-		this.nombre=nombre;
-		this.disparoStrategy=disparoStrategy;
-		this.disparoStrategy.setUnidad(this);
-	}
-	
-	public List<String> disparar()
-	{
+    private String nombre;
+    private DisparoStrategy disparoStrategy;
 
-		return this.disparoStrategy.disparar();
-	}
-	
-	public String toString(){
-		return "Unidad "+nombre;
-	}
+    public UnidadImpl(String nombre, DisparoStrategy disparoStrategy) {
+        this.nombre = nombre;
+        this.disparoStrategy = disparoStrategy;
+        this.disparoStrategy.setUnidad(this);
+    }
+
+    public List<String> disparar() {
+
+        return this.disparoStrategy.disparar();
+    }
+
+    public String toString() {
+        return "Unidad " + nombre;
+    }
 }
