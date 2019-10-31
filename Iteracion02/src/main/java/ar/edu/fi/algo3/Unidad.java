@@ -9,21 +9,20 @@ import java.util.List;
  */
 public class Unidad {
 
-	private String nombre;
-	private DisparoStrategy disparoStrategy;
-	
-	public Unidad(String nombre, DisparoStrategy disparoStrategy){
-		this.nombre=nombre;
-		this.disparoStrategy=disparoStrategy;
-		this.disparoStrategy.setUnidad(this);
-	}
-	
-	public List<String> disparar()
-	{
-		return this.disparoStrategy.disparar();
-	}
-	
-	public String toString(){
-		return "Unidad " + nombre;
-	}
+    private String nombre;
+    private DisparoStrategy disparoStrategy;
+
+    public Unidad(String nombre, DisparoStrategy disparoStrategy) {
+        this.nombre = nombre;
+        this.disparoStrategy = disparoStrategy;
+        this.disparoStrategy.setUnidad(this);
+    }
+
+    public List<String> disparar() {
+        return this.disparoStrategy.disparar();
+    }
+
+    public String toString() {
+        return "Unidad " + nombre;
+    }
 }

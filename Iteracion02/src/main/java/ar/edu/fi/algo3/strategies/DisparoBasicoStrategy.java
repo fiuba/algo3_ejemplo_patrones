@@ -12,25 +12,24 @@ import java.util.List;
  * @author Marcio Degiovannini
  */
 public class DisparoBasicoStrategy extends DisparoStrategy {
-	private Unidad unidad;
+    private Unidad unidad;
 
-	public List<String> disparar(){
-		List<String> result = new ArrayList<>();
+    public List<String> disparar() {
+        List<String> result = new ArrayList<>();
 
-		Collection unidades= CampoBatalla.getInstance().getUnidadesCercanas();
-		Iterator it = unidades.iterator();
-		while(it.hasNext())
-		{
-			Unidad other =(Unidad)it.next();
-			if ( other != unidad){
-				result.add("basico dispara a: " + other.toString());
-			}
-		}
+        Collection unidades = CampoBatalla.getInstance().getUnidadesCercanas();
+        Iterator it = unidades.iterator();
+        while (it.hasNext()) {
+            Unidad other = (Unidad) it.next();
+            if (other != unidad) {
+                result.add("basico dispara a: " + other.toString());
+            }
+        }
 
-		return result;
-	}
+        return result;
+    }
 
-	public void setUnidad(Unidad unidad) {
-		this.unidad=unidad;		
-	}
+    public void setUnidad(Unidad unidad) {
+        this.unidad = unidad;
+    }
 }

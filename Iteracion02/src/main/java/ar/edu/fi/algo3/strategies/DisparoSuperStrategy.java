@@ -19,12 +19,11 @@ public class DisparoSuperStrategy extends DisparoStrategy {
 	public List<String> disparar() {
 		List<String> result = new ArrayList<>();
 
-		Collection unidades= CampoBatalla.getInstance().getUnidadesCercanas();
+		Collection unidades = CampoBatalla.getInstance().getUnidadesCercanas();
 		Iterator it = unidades.iterator();
-		while(it.hasNext())
-		{
-			Unidad other =(Unidad)it.next();
-			if ( other != unidad){
+		while (it.hasNext()) {
+			Unidad other = (Unidad) it.next();
+			if (other != unidad) {
 				result.add("super dispara a: " + other.toString());
 			}
 		}
