@@ -19,7 +19,8 @@ public class Unidad {
     public List<String> disparar() {
         List<String> result = new ArrayList<>();
 
-        Collection unidades = CampoBatalla.getInstance().getUnidadesCercanas();
+        Collection unidades = CampoBatalla.getInstance()
+                .getUnidadesCercanas();
         Iterator it = unidades.iterator();
         while (it.hasNext()) {
             Unidad unidad = (Unidad) it.next();
@@ -32,6 +33,8 @@ public class Unidad {
     }
 
     public String toString() {
+
+
         return "Unidad " + nombre;
     }
 }

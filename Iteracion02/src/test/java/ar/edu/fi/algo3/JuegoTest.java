@@ -23,14 +23,19 @@ public class JuegoTest {
 
     @Test
     public void test() {
-        CampoBatalla.getInstance().AddUnidad(new Unidad("U1", new DisparoBasicoStrategy()));
-        CampoBatalla.getInstance().AddUnidad(new Unidad("U2", new DisparoBasicoStrategy()));
+        CampoBatalla.getInstance().AddUnidad(
+                new Unidad("U1", new DisparoBasicoStrategy()));
+        CampoBatalla.getInstance().AddUnidad(new Unidad("U2",
+                new DisparoBasicoStrategy()));
 
-        Unidad unaUnidad = new Unidad("U3", new DisparoBasicoStrategy());
+        Unidad unaUnidad = new Unidad("U3");
+        unaUnidad.setEstrategiaDisparo(new DisparoBasicoStrategy());
         CampoBatalla.getInstance().AddUnidad(unaUnidad);
 
 
-        List<String> expected = Arrays.asList("basico dispara a: Unidad U1", "basico dispara a: Unidad U2");
+        List<String> expected = Arrays.asList(
+                "basico dispara a: Unidad U1",
+                "basico dispara a: Unidad U2");
         assertEquals(unaUnidad.disparar(), expected);
     }
 }

@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
  *
  * War of word craft
  *
- *  - Singleton: Campo batalla
+ *  - UnidadImplSingleton: Campo batalla
  *  - Strategy: Diferentes ataques.
  *  - AbstractFactory, Proxy: Usuario remoto.
  *

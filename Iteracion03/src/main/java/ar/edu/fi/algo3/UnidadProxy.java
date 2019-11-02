@@ -10,12 +10,12 @@ import java.util.List;
  */
 public class UnidadProxy implements Unidad {
 
+    private final UnidadImpl representado;
     private String nombre;
     private DisparoStrategy estrategiaDisparo;
 
     public UnidadProxy(String nombre, DisparoStrategy estrategiaDisparo) {
-        this.nombre = nombre;
-        this.estrategiaDisparo = estrategiaDisparo;
+        this.representado = new UnidadImpl(nombre, estrategiaDisparo);
         MaquinaRemota.getInstance().CrearUnidad(this);
 
     }
@@ -23,7 +23,7 @@ public class UnidadProxy implements Unidad {
     public List<String> disparar() {
         String remoteResult = MaquinaRemota.getInstance().DispararUnidad(this);
 
-        List<String> result = new UnidadImpl(nombre, estrategiaDisparo).disparar();
+        List<String> result = this.representado.disparar();
 
         result.add(remoteResult);
 
