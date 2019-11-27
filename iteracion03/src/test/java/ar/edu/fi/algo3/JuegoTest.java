@@ -1,11 +1,9 @@
-package test.java.ar.edu.fi.algo3;
+package ar.edu.fi.algo3;
 
-import main.java.ar.edu.fi.algo3.CampoBatalla;
-import main.java.ar.edu.fi.algo3.Unidad;
-import main.java.ar.edu.fi.algo3.factories.AbstractUnidadFactory;
-import main.java.ar.edu.fi.algo3.factories.UnidadRemotaFactory;
-import main.java.ar.edu.fi.algo3.strategies.DisparoBasicoStrategy;
-import main.java.ar.edu.fi.algo3.strategies.DisparoSuperStrategy;
+import ar.edu.fi.algo3.factories.AbstractUnidadFactory;
+import ar.edu.fi.algo3.factories.UnidadRemotaFactory;
+import ar.edu.fi.algo3.strategies.DisparoBasicoStrategy;
+import ar.edu.fi.algo3.strategies.DisparoSuperStrategy;
 import org.junit.Test;
 
 import java.util.Arrays;

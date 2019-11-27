@@ -1,4 +1,4 @@
-package main.java.ar.edu.fi.algo3;
+package ar.edu.fi.algo3;
 
 import java.util.ArrayList;
 import java.util.Collection;

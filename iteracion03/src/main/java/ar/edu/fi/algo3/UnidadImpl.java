@@ -1,7 +1,7 @@
-package main.java.ar.edu.fi.algo3;
+package ar.edu.fi.algo3;
 
 
-import main.java.ar.edu.fi.algo3.strategies.DisparoStrategy;
+import ar.edu.fi.algo3.strategies.DisparoStrategy;
 
 import java.util.List;
 
@@ -24,7 +24,13 @@ public class UnidadImpl implements Unidad {
         return this.disparoStrategy.disparar();
     }
 
-    public String toString() {
-        return "Unidad " + nombre;
+    public String mostrarmeComoString(String prefijo) {
+        return prefijo + nombre;
     }
+
+    public String toString() {
+
+        return mostrarmeComoString("Unidad ");
+    }
+
 }

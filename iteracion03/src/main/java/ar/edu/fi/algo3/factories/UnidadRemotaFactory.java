@@ -1,8 +1,8 @@
-package main.java.ar.edu.fi.algo3.factories;
+package ar.edu.fi.algo3.factories;
 
-import main.java.ar.edu.fi.algo3.Unidad;
-import main.java.ar.edu.fi.algo3.UnidadProxy;
-import main.java.ar.edu.fi.algo3.strategies.DisparoStrategy;
+import ar.edu.fi.algo3.Unidad;
+import ar.edu.fi.algo3.UnidadProxy;
+import ar.edu.fi.algo3.strategies.DisparoStrategy;
 
 /**
  * @author Marcio Degiovannini
