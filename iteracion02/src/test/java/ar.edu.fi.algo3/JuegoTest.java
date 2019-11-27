@@ -1,8 +1,6 @@
-package test.java.ar.edu.fi.algo3;
+package ar.edu.fi.algo3;
 
-import main.java.ar.edu.fi.algo3.CampoBatalla;
-import main.java.ar.edu.fi.algo3.Unidad;
-import main.java.ar.edu.fi.algo3.strategies.DisparoBasicoStrategy;
+import ar.edu.fi.algo3.strategies.DisparoBasicoStrategy;
 import org.junit.Test;
 
 import java.util.Arrays;

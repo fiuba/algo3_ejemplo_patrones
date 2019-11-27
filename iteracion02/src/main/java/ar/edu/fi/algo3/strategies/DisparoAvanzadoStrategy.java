@@ -1,4 +1,4 @@
-package main.java.ar.edu.fi.algo3.strategies;
+package ar.edu.fi.algo3.strategies;
 
 import main.java.ar.edu.fi.algo3.CampoBatalla;
 import main.java.ar.edu.fi.algo3.Unidad;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author Marcio Degiovannini
  */
-public class DisparoAvanzadoStrategy extends DisparoStrategy {
+public class DisparoAvanzadoStrategy extends main.java.ar.edu.fi.algo3.strategies.DisparoStrategy {
 
     private Unidad unidad;
 

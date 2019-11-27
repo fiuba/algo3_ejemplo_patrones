@@ -1,7 +1,7 @@
-package main.java.ar.edu.fi.algo3;
+package ar.edu.fi.algo3;
 
-import main.java.ar.edu.fi.algo3.strategies.DisparoBasicoStrategy;
-import main.java.ar.edu.fi.algo3.strategies.DisparoStrategy;
+import ar.edu.fi.algo3.strategies.DisparoBasicoStrategy;
+import ar.edu.fi.algo3.strategies.DisparoStrategy;
 
 import java.util.List;
 
